@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(203, 192, 192);
+    align-items: center;
+    font-size: 15px;
+  }
+  
+  .container {
+    background-color: #fff;
+    width: 750px;
+    max-width: 100vw;
+    height: 480px;
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  .forms-container {
+    position: relative;
+    width: 50%;
+    text-align: center;
+  }
+  
+  .form-control {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 480px;
+   
+  }
+  
+  .form-control h2 {
+    font-size: 2rem;
+  }
+  
+  .form-control form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px;
+  }
+  
+  .form-control form input {
+    margin: 10px 0;
+    border: none;
+    padding: 15px;
+    background-color: #efefef;
+    border-radius: 5px;
+  }
+  
+  .form-control form button {
+    border: none;
+    padding: 20px;
+    margin-top: 5px;
+    background-color: #117656;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+     transition: all 0.5s ease-in;
+  }
+  
+  .form-control form button:focus {
+    outline: none;
+  }
+  
+  .form-control span {
+    margin: 10px 0;
+  }
+  
+  .media i {
+    margin: 0 5px;
+    color: #fff;
+    border-radius: 50%;
+  }
+  
+  .fa-facebook-f {
+    padding: 5px 8px;
+    background-color: #0c54ef;
+  }
+  
+  .fa-google-plus-g {
+    padding: 5px 4px;
+    background-color: #fc1b02;
+  }
+  
+  .fa-linkedin-in {
+    padding: 5px 6px;
+    background-color: #08aefb;
+  }
+  
+  .signup-form {
+    opacity: 0;
+    z-index: 1;
+    left: 200%;
+  }
+  
+  .signin-form {
+    opacity: 1;
+    z-index: 2;
+    left: 0%;
+  }
+  
+  .matter-container {
+    position: relative;
+    left: 50%;
+    width: 50%;
+    text-align: center;
+  }
+  
+  .matter-control {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 480px;
+    color: #fff;
+    background: linear-gradient(170deg, #268a65, #059669);
+    transition: all 0.5s ease-in;
+  }
+  
+  .matter-control__inner {
+    margin: 0 30px;
+  }
+  
+  .matter-control button {
+    border: none;
+    padding: 15px 30px;
+    background-color: #11996c;
+    border-radius: 50px;
+    color: #fff;
+    margin: 10px 0;
+    cursor: pointer;
+  }
+  
+  .matter-control button:focus, .matter-control button:hover {
+    outline: none;
+    background-color: #18a679;
+  }
+  
+  .matter-control h3,.matter-control p {
+    margin: 10px 0;
+  }
+  
+  .signin-matter {
+    opacity: 1;
+    z-index: 2;
+  }
+  
+  .signup-matter {
+    opacity: 0;
+    z-index: 1;
+  }
+  
+  .change .signup-form {
+    opacity: 1;
+    z-index: 2;
+    transform: translateX(-100%);
+  }
+  
+  .change .signup-form button {
+    background-color: #1d4aaa !important;
+  }
+  
+  .change .signin-form {
+    opacity: 0;
+    z-index: 1;
+    transform: translateX(-100%);
+  }
+  
+  .change .matter-control {
+    transform: translateX(-100%);
+    background: linear-gradient(170deg, #3b82f6, #18439e);
+  }
+  
+  .change .matter-control #signin-btn {
+    background-color:#1d4aaa;
+  }
+  
+  .change .signin-matter {
+    opacity: 0;
+    z-index: 1;
+  }
+  
+  .change .signup-matter {
+    opacity: 1;
+    z-index: 2;
+  }
+  
+  @media screen and (max-width: 480px) {
+    .container {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .forms-container {
+      order: 2;
+      width: 100%;
+      height: 50vh;
+    }
+    .form-control {
+      position: absolute;
+      height: 50vh;
+    }
+    .signup-form {
+      left: 0%;
+      margin-top: 70px;
+    }
+    .intros-container {
+      order: 1;
+      width: 100%;
+      left: 0%;
+      height: 40vh;
+    }
+    .intro-control {
+      position: absolute;
+      height: 40vh;
+    }
+  
+    .change .signup-form {
+      transform: translateX(0%);
+    }
+    .change .signin-form {
+      transform: translateX(0%);
+    }
+    .change .intro-control {
+      transform: translateX(0%);
+    }
+  }
+  
